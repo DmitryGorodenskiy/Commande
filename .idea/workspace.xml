@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e1e9e39-3a50-4aef-931d-e41cb354c441" name="Changes" comment="Отображение поля вывода сообщений">
-      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/IPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/PrinterController.java" afterDir="false" />
+    <list default="true" id="0e1e9e39-3a50-4aef-931d-e41cb354c441" name="Changes" comment="Реакция системы на изменения">
+      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/ICommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/Light.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/LightOnCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/SimpleRemoteControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/gorodenskiy/commande/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/Supervisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/MyActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/MyActionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/Pult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/Pult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,15 +55,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Игорь Булгаков/Documents/Commande/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "commandLight",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/Игорь Булгаков/Documents/Commande/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -96,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717064186474</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Реакция системы на изменения">
+      <option name="closed" value="true" />
+      <created>1717066204651</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717066204651</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +123,7 @@
     <MESSAGE value="Отображение пульта" />
     <MESSAGE value="Отображение портов" />
     <MESSAGE value="Отображение поля вывода сообщений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отображение поля вывода сообщений" />
+    <MESSAGE value="Реакция системы на изменения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реакция системы на изменения" />
   </component>
 </project>
