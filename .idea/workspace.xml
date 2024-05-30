@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e1e9e39-3a50-4aef-931d-e41cb354c441" name="Changes" comment="Реакция системы на изменения">
-      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/ICommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/Light.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/LightOnCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/SimpleRemoteControl.java" afterDir="false" />
+    <list default="true" id="0e1e9e39-3a50-4aef-931d-e41cb354c441" name="Changes" comment="Новый объект команды">
+      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/GarageDoor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/sandbox/GarageDoorOpenCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/gorodenskiy/commande/Supervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/Supervisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/Pult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/gorodenskiy/commande/graphics/Pult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717066204651</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Новый объект команды">
+      <option name="closed" value="true" />
+      <created>1717069083971</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717069083971</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +129,7 @@
     <MESSAGE value="Отображение портов" />
     <MESSAGE value="Отображение поля вывода сообщений" />
     <MESSAGE value="Реакция системы на изменения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реакция системы на изменения" />
+    <MESSAGE value="Новый объект команды" />
+    <option name="LAST_COMMIT_MESSAGE" value="Новый объект команды" />
   </component>
 </project>
