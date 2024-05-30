@@ -19,8 +19,36 @@ public class Pult extends JFrame {
         frame.setPreferredSize(new Dimension(1580,850));
         frame.getContentPane().setLayout(new GridBagLayout());
         makePultContainer(frame);
+        makePortContainer(frame);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private void makePortContainer(JFrame frame) {
+        JPanel container = new JPanel();
+        container.setPreferredSize(new Dimension(250, 400));
+        JLabel[] labels = new JLabel[buttonsCount];
+        JPanel ports = new JPanel();
+        ports.setBorder(BorderFactory.createTitledBorder("Состояние портов"));
+        container.add(ports, BorderLayout.NORTH);
+        for (int i = 0; i < buttonsCount; i++) {
+            if (i < textFieldStrings.length) {
+                labels[i] = new JLabel(textFieldStrings[i]);
+            } else {
+                labels[i] = new JLabel("");
+            }
+        }
+        addLabelTextRows(labels, ports, true, arrRoundButton, frame);
+        GridBagConstraints contc = new GridBagConstraints();
+        contc.gridwidth = 3;
+        contc.gridheight = 3;
+        contc.weightx = 0.0;
+        contc.weighty = 0.0;
+        contc.insets = new Insets(10, 10, 10, 10);
+        contc.gridx = 2;
+        contc.gridy = 1;
+        contc.anchor = GridBagConstraints.SOUTHWEST;
+        frame.getContentPane().add(container, contc);
     }
 
     private void makePultContainer(JFrame frame) {
