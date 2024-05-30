@@ -1,14 +1,18 @@
 package gorodenskiy.commande.graphics;
 
 import javax.swing.*;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
 import java.awt.*;
-import java.util.ArrayList;
+import java.util. ArrayList;
 
 
 public class Pult extends JFrame {
     private String[] textFieldStrings;
     private int buttonsCount;
+    private String textOut;
     private ArrayList<RoundButton> arrRoundButton;
+
     public Pult(String[] textFieldStrings, int buttonsCount) {
         this.textFieldStrings = textFieldStrings;
         this.buttonsCount = buttonsCount;
@@ -20,8 +24,29 @@ public class Pult extends JFrame {
         frame.getContentPane().setLayout(new GridBagLayout());
         makePultContainer(frame);
         makePortContainer(frame);
+        makeMessagesPanel(frame);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private void makeMessagesPanel(JFrame frame) {
+        JTextPane pane = new JTextPane();
+        SimpleAttributeSet attributeSet = new SimpleAttributeSet();
+        StyleConstants.setFontSize(attributeSet, 16);
+        StyleConstants.setForeground(attributeSet, Color.black);
+        pane.setCharacterAttributes(attributeSet, true);
+        pane.setText(textOut);
+        GridBagConstraints contr = new GridBagConstraints();
+        contr.fill = GridBagConstraints.BOTH;
+        contr.gridx = 3;
+        contr.gridy = 0;
+        contr.anchor = GridBagConstraints.WEST;
+        contr.weightx = 19.9;
+        contr.weighty = 1.0;
+        contr.insets = new Insets(10, 0, 10, 10);
+        contr.gridwidth = 4;
+        contr.gridheight = 4;//GridBagConstraints.REMAINDER;//
+        frame.add(pane, contr);
     }
 
     private void makePortContainer(JFrame frame) {
@@ -134,5 +159,9 @@ public class Pult extends JFrame {
         c.gridx = 1;
         c.gridwidth = 2;
         pane.add(button, c);
+    }
+
+    public void setTextOut(String textOut) {
+        this.textOut = textOut;
     }
 }
