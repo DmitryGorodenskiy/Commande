@@ -1,5 +1,7 @@
 package gorodenskiy.commande.graphics;
 
+import gorodenskiy.commande.Supervisor;
+
 import javax.swing.*;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
@@ -12,12 +14,17 @@ public class Pult extends JFrame {
     private int buttonsCount;
     private String textOut;
     private ArrayList<RoundButton> arrRoundButton;
+    private JTextPane pane;
+    private Supervisor supervisor;
 
-    public Pult(String[] textFieldStrings, int buttonsCount) {
+    public Pult(String[] textFieldStrings, int buttonsCount, Supervisor supervisor) {
         this.textFieldStrings = textFieldStrings;
         this.buttonsCount = buttonsCount;
         arrRoundButton = new ArrayList<>();
+        pane = new JTextPane();
+        this.supervisor = supervisor;
     }
+
     public void myCreateAndShowAPI(JFrame frame) {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(1580,850));
@@ -30,7 +37,6 @@ public class Pult extends JFrame {
     }
 
     private void makeMessagesPanel(JFrame frame) {
-        JTextPane pane = new JTextPane();
         SimpleAttributeSet attributeSet = new SimpleAttributeSet();
         StyleConstants.setFontSize(attributeSet, 16);
         StyleConstants.setForeground(attributeSet, Color.black);
@@ -63,7 +69,7 @@ public class Pult extends JFrame {
                 labels[i] = new JLabel("");
             }
         }
-        addLabelTextRows(labels, ports, true, arrRoundButton, frame);
+        addLabelTextRows(labels, ports, true, arrRoundButton, frame, supervisor);
         GridBagConstraints contc = new GridBagConstraints();
         contc.gridwidth = 3;
         contc.gridheight = 3;
@@ -89,7 +95,7 @@ public class Pult extends JFrame {
                 labels[i] = new JLabel("");
             }
         }
-        addLabelTextRows(labels, textControlsPane, false, arrRoundButton, frame);
+        addLabelTextRows(labels, textControlsPane, false, arrRoundButton, frame, supervisor);
         container.add(textControlsPane, BorderLayout.WEST);
         GridBagConstraints contc = new GridBagConstraints();
         contc.gridwidth = 3;
@@ -102,8 +108,9 @@ public class Pult extends JFrame {
         contc.insets = new Insets(10, 10, 10, 10);
         frame.getContentPane().add(container, contc);
     }
-    private void addLabelTextRows(JLabel[] labels, Container pane, boolean circle, ArrayList<RoundButton> arrRoundButton, JFrame frame) {
-        JButton button; MyActionListener myActionListener = new MyActionListener(arrRoundButton, frame);
+    private void addLabelTextRows(JLabel[] labels, Container pane, boolean circle, ArrayList<RoundButton> arrRoundButton, JFrame frame, Supervisor supervisor) {
+        JButton button;
+        MyActionListener myActionListener = new MyActionListener(arrRoundButton, frame, supervisor);
         pane.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         int numLabels = labels.length;
