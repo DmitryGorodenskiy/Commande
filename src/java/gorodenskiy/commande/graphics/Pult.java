@@ -52,7 +52,8 @@ public class Pult extends JFrame {
         contr.insets = new Insets(10, 0, 10, 10);
         contr.gridwidth = 4;
         contr.gridheight = 4;//GridBagConstraints.REMAINDER;//
-        frame.add(pane, contr);
+        final JScrollPane scrollPane = new JScrollPane(pane);
+        frame.add(scrollPane, contr);
     }
 
     private void makePortContainer(JFrame frame) {
