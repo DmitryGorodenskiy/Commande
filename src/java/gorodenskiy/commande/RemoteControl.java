@@ -34,7 +34,7 @@ public class RemoteControl {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("\n-----RemoteControl-----" + message + "\n");
         for (int i = 0; i < offCommands.length; i++) {
-            stringBuffer.append("[slot " + i + "] " + offCommands[i].getClass().getName() + "    " + offCommands[i].getClass().getName() + "\n");
+            stringBuffer.append("[slot " + i + "] " + onCommands[i].getClass().getName() + "    " + offCommands[i].getClass().getName() + "\n");
         }
         return stringBuffer.toString();
     }
